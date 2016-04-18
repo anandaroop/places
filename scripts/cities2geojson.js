@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 var cities = require('../cities.js')
 
 collection = {
@@ -13,9 +15,9 @@ cities.forEach(function(city){
       "coordinates": [city.coords[1],city.coords[0]]
     },
     "properties": {
-      "name": "Amsterdam",
-      "slug": "amsterdam",
-      "sort_order": 1000
+      "name": city.name,
+      "slug": city.slug,
+      "sort_order": city.sort_order
     }
   })
 })
